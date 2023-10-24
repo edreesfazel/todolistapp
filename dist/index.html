@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="titleText">Todo Manager</h1>
+    <div id="container">
+  
+        
+        <div id="largeProjectContainer">
+            <h2>Projects</h2>
+            <div id="projectInputAndButton">
+                <input type="text" id="projectNameInput" placeholder="Enter project name">
+                <button id="addProjectButton">Add Project</button>
+    
+            </div>
+            <div id="projectContainer">
+      
+            </div>
+
+        </div>
+
+  
+        <div id="formContainer">
+            <h2>Add New Todo</h2>
+            <form id="todoForm">
+                <input type="text" id="title" placeholder="Title">
+                <textarea id="description" placeholder="Description"></textarea>
+                <input type="date" id="dueDate">
+                <select id="priority">
+                    <option value="high"> High </option>
+                    <option value="medium"> Medium </option>
+                    <option value="low"> Low </option>
+                </select>
+                <select id="projectSelect">
+                    <option value="" disabled selected></option>
+
+                </select>
+                <button type="button" id="submitTodo">Add Todo</button>
+            </form>
+        </div>
+
+        <div class="todos-section">
+            <h2>Current Todos</h2>
+            <div id="toDoDisplay"> </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
