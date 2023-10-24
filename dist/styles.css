@@ -181,4 +181,31 @@ h2 {
 
 #titleText {
     text-align: center;
+} 
+
+.deleteProjectButton {
+    background-color: #e74c3c; /* Red background for delete */
+    color: #ffffff; /* White text */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Consistent with other buttons */
+    width: 20px; /* Fixed width */
+    height: 20px; /* Fixed height */
+    display: inline-block; /* So we can give it width and height */
+    text-align: center; /* Center the "x" inside the button */
+    cursor: pointer; /* Change cursor on hover to indicate clickability */
+    margin: 10px; /* Some spacing to the left */
+    font-family: Arial, sans-serif; /* Ensure consistent font */
+    transition: background-color 0.3s; /* Consistent hover effect */
+    align-self: center;
+}
+
+.deleteProjectButton:hover {
+    background-color: #c0392b; /* Darker red on hover, like your other buttons */
+}
+
+/* Optional: If you want the "x" to appear a bit bigger inside the button */
+.deleteProjectButton:before {
+    content: '✖'; /* Unicode 'x' character */
+    position: relative;
+    top: -2px; /* Adjust as needed for vertical alignment */
 }

@@ -1,7 +1,7 @@
 import todoFactory from "./todoFactory";
 import { addTodo } from "./addTodo";
-import { createProject, projects, addProject } from "./projects";
-import { clearTodos, displayTodosForProject } from "./uiManager";
+import { createProject, projects, addProject, deleteProject } from "./projects";
+import { clearTodos, displayTodosForProject, } from "./uiManager";
 
 const sampleTodo1 = todoFactory('Buy Food', 'get fruits and chicken', '2023-10-25', 'high');
 const sampleTodo2 = todoFactory('Play Basketball', 'go to gym and play pickup', '2023-10-22', 'medium');
@@ -82,4 +82,10 @@ projectContainer.addEventListener('click', (event) => {
         })
  
     }
+
+    if (event.target.classList.contains('deleteProjectButton')) {
+        const clickedProjectName = event.target.previousElementSibling.textContent;
+        deleteProject(clickedProjectName)
+    }
 })
+

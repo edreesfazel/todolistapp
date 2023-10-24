@@ -55,6 +55,10 @@ const updateProjectDisplay = () => {
     
     projects.forEach(project => {
 
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'x';
+        deleteButton.classList.add('deleteProjectButton')
+
 
         const projectDisplayDiv = document.createElement('div')
         const projectDisplayText = document.createElement('h2')
@@ -68,6 +72,7 @@ const updateProjectDisplay = () => {
         projectDisplayDiv.classList.add('projectDisplayDiv')
         
         projectDisplayDiv.appendChild(projectDisplayText)
+        projectDisplayDiv.appendChild(deleteButton)
         projectContainer.appendChild(projectDisplayDiv)
 
     })

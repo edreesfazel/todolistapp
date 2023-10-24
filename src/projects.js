@@ -1,6 +1,7 @@
 import { updateProjectDisplay } from "./uiManager";
+import { loadFromLocalStorage, saveToLocalStorage } from "./storage";
 
-let projects = [];
+const projects = loadFromLocalStorage();
 
 //this function creates a project and adds it to our projects array
 //then it calls the update project dropdown to update the ui
@@ -48,9 +49,23 @@ const addProject = () => {
     } else {
         alert('Please enter a valid project name');
     }
+    saveToLocalStorage(projects)
 
 
 
 }
 
-export {createProject, updateProjectDropdown, projects, addProject}
+const deleteProject = (projectName) => {
+    const projectIndex = projects.findIndex(project => project.name === projectName)
+    if (projectIndex > -1) {
+        projects.splice(projectIndex, 1)
+        saveToLocalStorage(projects)
+        updateProjectDisplay(); // refresh the UI
+        updateProjectDropdown() // refresh the dropdown
+    }
+
+}
+
+updateProjectDisplay();
+
+export {createProject, updateProjectDropdown, projects, addProject, deleteProject}

@@ -1,6 +1,7 @@
 import {projects} from './projects'
 import { clearTodos, displayTodosForProject } from './uiManager';
 import validateInputs from './inputValidation';
+import { saveToLocalStorage } from './storage';
 
 const addTodo = () => {
     //get values from the input fields
@@ -67,6 +68,7 @@ const addTodo = () => {
 
     toDoDisplay.appendChild(toDoDiv)
 
+    saveToLocalStorage(projects)
 
 
     clearTodos()
