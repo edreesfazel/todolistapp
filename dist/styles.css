@@ -200,7 +200,7 @@ h2 {
 }
 
 .deleteProjectButton:hover {
-    background-color: #c0392b; /* Darker red on hover, like your other buttons */
+    background-color: #c0392c; /* Darker red on hover, like your other buttons */
 }
 
 /* Optional: If you want the "x" to appear a bit bigger inside the button */
